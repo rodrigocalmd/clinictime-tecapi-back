@@ -96,14 +96,6 @@ Exemplo de resposta:
 ``` 
 POST localhost:3000
 ```
-#### Exemplo do body:
-```
-{
-    "date": "12-02-2021",
-    "start": "17:00",
-    "end": "17:30"
-}
-```
 
 #### Valores que devem ser passados da requisição:
 
@@ -111,17 +103,61 @@ POST localhost:3000
  - ``start `` (String):  Horario de inicio do atendimento, deve-se sequir o padrão 'HH:mm'.
  - ``end`` (String): Horario do fim do atendimento, deve-se sequir o padrão 'HH:mm'
  - ``everyday`` (Boolean): Se true indicará que havera atendimento todos os dias nós horarios informados.
- - ``weekday`` (Number): Usada para indicar um dia da semana que terá atendimento semanalmente, ou seja todas as semanas no dia indicado terá atendimento nos horários informados. ( **OBS**: Os dias são informados entre os valores 0 e 6, sendo 0 domingo e 6 sábado. )
+ - ``weekday`` (Number): Usada para indicar um dia da semana que terá atendimento semanalmente, ou seja todas as semanas no dia indicado terá atendimento nos horários informados. ( **OBS**: Os dias são informados entre os valores 0 e 6, sendo 0 domingo e 6 sábado. (Finais de semanas não serão listados!))
 
  #### **OBS**: Deve-se ser usado apenas um entre ``date``, ``everyday``, ``weekday``, já ``start`` e ``end`` são obrigatórias em todas as requisições.
 
- Exemplo de resposta:
+#### Exemplo do body (com date):
+```
+{
+    "date": "12-02-2021",
+    "start": "17:00",
+    "end": "17:30"
+}
+```
+#### Exemplo do body (com everyday):
+```
+{
+    "everyday": true,
+    "start": "15:00",
+    "end": "15:30"
+}
+```
+#### Exemplo do body (com weekday):
+```
+{
+    "weekday": 4,
+    "start": "10:00",
+    "end": "10:30"
+}
+```
+
+
+ Exemplo de resposta(com date):
  ``` 
 {
     "id": 1,
     "date": "12-02-2021",
     "start": "17:00",
     "end": "17:30"
+}
+```
+ Exemplo de resposta(com everyday):
+ ``` 
+{
+    "id": 2,
+    "everyday": true,
+    "start": "15:00",
+    "end": "15:30"
+}
+```
+ Exemplo de resposta(com weekday):
+ ``` 
+{
+    "id": 3,
+    "weekday": 4,
+    "start": "10:00",
+    "end": "10:30"
 }
 ```
 
