@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env DATAJSON=./src/CLINIC_TIMES.json&& tsc && node ./dist/server.js",
-    "dev": "cross-env DATAJSON=./src/CLINIC_TIMES.json&& nodemon --watch src --ignore src/CLINIC_TIMES.json --exec ts-node ./src/server.ts",
-    "test": "cross-env DATAJSON=./src/test/CLINIC_TIMES_TEST_TMP.json&& jest"
+    "start": "tsc && cross-env DATAJSON=./dist/CLINIC_TIMES.json node ./dist/server.js",
+    "start:dev": "cross-env DATAJSON=./src/CLINIC_TIMES.json nodemon --watch src --ignore src/CLINIC_TIMES.json --exec ts-node ./src/server.ts",
+    "test": "cross-env DATAJSON=./src/test/CLINIC_TIMES_TEST_TMP.json jest"
   },
   "keywords": [],
   "author": "",

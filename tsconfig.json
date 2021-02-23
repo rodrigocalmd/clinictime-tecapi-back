@@ -18,6 +18,6 @@
   "include": [
     "src",
     "src/CLINIC_TIMES.json",
-    "src/CLINIC_TIMES_TEST.json"
+    "src/test/CLINIC_TIMES_TEST.json"
   ]
 }
