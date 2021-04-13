@@ -169,4 +169,4 @@ DEL localhost:3000/15
 ```
 A respostar deve ser status `200`.
 
-### **OBS**: Segue dentro do repositorio o arquivo ``ClinicTime-TecAPI-Back.postman_collection.json``, que é um collection do postman, com exemplos das requisições.
+#### **OBS**: Segue dentro do repositorio o arquivo ``ClinicTime-TecAPI-Back.postman_collection.json``, que é um collection do postman, com exemplos das requisições.
